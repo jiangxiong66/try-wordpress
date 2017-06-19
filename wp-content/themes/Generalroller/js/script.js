@@ -268,11 +268,6 @@ $("#comment_shop_btn").click(function() {
 });
 
 
-
-
-  
- });
-
  $(".ouf_1").click(function() {
 	if($(this).hasClass("cues")){}else{
 	 $(this).parent(".fourq_title").nextAll("ul").fadeOut(0);
@@ -298,4 +293,9 @@ $(".ouf_2").click(function() {
 	 $(this).addClass("cues")
 	}
 	 });
+
+  
+ });
+
+
 
