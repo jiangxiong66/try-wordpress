@@ -790,3 +790,23 @@ body:after {content: url("images/close.png") url("images/loading.gif") url("imag
 .swiper-wp8-vertical {
 	-ms-touch-action: pan-x;
 }
+
+.fourq{width:100%; height: auto;  float:left; margin:0 0 20px 0; background:#FFF; border:#cbcbcb solid 1px; position:relative;}
+.fourq_title{ width:100%; border-bottom:1px solid #cbcbcb ; margin-bottom:10px; overflow:hidden;}
+.fourq_title a{ display:block; float:left; padding:5px 3%; cursor:pointer; }
+.fourq_title a.cues{ background:#11a3c2; color:#FFF !important; text-decoration:none;}
+.fourq ul li{ display:block; width:96%; margin:3px 0; float:left;}
+.fourq ul li.fourq_first{ border-bottom:dashed 1px #ccc; padding:0 0 5px 5px; margin-bottom:5px;}
+.fourq ul li.fourq_first .four_pic{ width:31%; height:auto; float:left; display:block; font-size:0;}
+.fourq ul li.fourq_first span{ width:62%; padding-left:3%; float:left; display:block; overflow:hidden;}
+.fourq ul li.fourq_first span b{ font-size:14px; width:100%; display: block;}
+.fourq ul li.fourq_first span p{ width:100%; display:block; font-size:12px; color:#666;}
+.fourq ul li.fourq_first span p a{ color:#11a3c2; margin-right:10px; display:block;}
+.fourq ul { position:relative; left:0; top:0;}
+.fourq ul.ulf_2,.fourq ul.ulf_3{ display:none;} 
+.fourq ul li.text_fp{ width:96%; padding:5px 2%; border-bottom:#CCC dashed 1px;}
+.fourq ul li.text_fp a{ font-size:14px; font-weight:normal; display:block; padding-left:15px; background: 1px -98px  no-repeat url("images/Sprites.png");}
+
+.fourq_more{border-bottom:dashed 1px #ccc; text-align:center; background:#F7F7F7; width:100% !important;}
+.fourq_more a{ font-size:14px; color:#333; display:block; width:100%; height:30px; line-height:30px;}
+.fourq_more:hover{ background:#EEE;}
