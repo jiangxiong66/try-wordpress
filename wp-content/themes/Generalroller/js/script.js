@@ -273,3 +273,29 @@ $("#comment_shop_btn").click(function() {
   
  });
 
+ $(".ouf_1").click(function() {
+	if($(this).hasClass("cues")){}else{
+	 $(this).parent(".fourq_title").nextAll("ul").fadeOut(0);
+	 $(this).parent(".fourq_title").nextAll(".ulf_1").fadeIn(0);
+	 $(this).parent(".fourq_title").children("a").removeClass("cues")
+	 $(this).addClass("cues")
+	}
+	 });  
+	 
+$(".ouf_2").click(function() {
+	if($(this).hasClass("cues")){}else{
+	 $(this).parent(".fourq_title").nextAll("ul").fadeOut(0);
+	 $(this).parent(".fourq_title").nextAll(".ulf_2").fadeIn(0);
+	  $(this).parent(".fourq_title").children("a").removeClass("cues")
+	 $(this).addClass("cues")
+	}
+	 });	 
+ $(".ouf_3").click(function() {
+	if($(this).hasClass("cues")){}else{
+	 $(this).parent(".fourq_title").nextAll("ul").fadeOut(0);
+	 $(this).parent(".fourq_title").nextAll(".ulf_3").fadeIn(0);
+	  $(this).parent(".fourq_title").children("a").removeClass("cues")
+	 $(this).addClass("cues")
+	}
+	 });
+
