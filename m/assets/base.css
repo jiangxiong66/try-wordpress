@@ -1,0 +1,104 @@
+/* 
+    Document   : base
+    Author     : cmorfin
+*/
+
+
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: white;
+    /* background: url("../images/css/background.jpg") no-repeat 0 0 #000000;*/
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+    /* font-family: Georgia, "DejaVu Serif", "Times New Roman", Times, serif;*/
+    width: 100%;
+    height: 100%;
+    font-size: 1em;             /* 16px */
+    line-height: 1.5em;         /* 24px */
+    color: #333333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+
+
+/* liens ==================================================================== */
+
+a{
+    text-decoration: underline;
+    color: #252525;
+}
+
+a:visited {
+    color: #252525;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #252525;
+}
+
+a:hover,
+a:active {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* classes d'aide =========================================================== */
+
+.ir{
+    border: 0;
+    font: 0/0 a;
+    text-shadow:none;
+    color: transparent;
+    background-color: transparent;
+}
+
+.hidden{
+    display: none !important;
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/* ========================= CSS de merde pour le proof of concept de mathias */
+.login {
+  margin-top:50px;
+  margin-left:50px;
+  
+}
+
+.login .info {
+  float: left;
+  width: 40px;
+  font-size:11px;
+
+}
+.login .inputtext {
+  padding:3px;
+  border:1px solid #676662;
+}
+

@@ -1,0 +1,44 @@
+html{overflow:hidden;width:500px; height:750px;margin:0 auto; position:relative; border:solid #CCC 30px;}
+body{ height:100%;}
+.header{ position:absolute !important;}
+.left_right .left_pic,.left_right .right_text,.left_right .left_pic{width:100%;}
+.swiper-slide_in h3,.swiper-slide_in h3 a{font-size:22px; margin-bottom:3px;}	
+.left_right .right_text b,.up_down .up_text b{ font-size:14px; margin-bottom:3px;}
+.left_right .right_text p{font-size:14px; margin:0;line-height:18px;margin-bottom:3px; }
+a.btn b{ font-size:12px !important;}
+.index_swipers .swiper-slide .news .left_news{ width:100%;}
+.up_down .up_text{ margin-top:100px;}
+.case_up{ margin-top:100px;}
+.index_swipers .swiper-slide .news{margin:80px  auto}
+.footer{ position:relative; bottom:0; height:57px; width:100%;}
+.contact_footer_box	{ width:45px; height:45px; position: fixed;  z-index:1000; bottom:0;right:0; box-shadow:0 0 3px #333; border-radius:5px; background:#fff  11px -296px no-repeat url('../images/kefu2.png');}
+.contact_footer{ width:100%; height:37px; padding:10px 0; position: fixed;  z-index:1000; left:0; bottom:0; background:#fff; text-align:center;}
+.contact_footer  a{ color:#333; display:inline-block; width: 30px; height:37px;background-image:url('../images/kefu2.png'); margin-right:13px; background-repeat:no-repeat; font-size:12px; line-height:64px;}.contact_footer_tell{background-position:4px 3px;}
+.contact_footer_email{background-position:4px -40px;}
+.contact_footer_qq{background-position:4px -172px;}
+.contact_footer_weixin{background-position:4px -128px;}
+.contact_footer_caidan{background-position:4px -84px;}
+.contact_footer_closed{background-position:4px -212px;}
+.contact_footer_login{background-position:4px -254px; position:relative;}
+.contact_footer_login .cart_nuber{ position:absolute; font-size:10px; color:#FFF; background:#F30; top:0; right:0; border-radius:100%; width:15px; height:15px; line-height:15px;}
+.display_none{bottom:-60px ;}
+	.header_in .header_btn_s{ float:right; height:65px; width:auto; position:relative; z-index:2; }
+.header_in .header_btn_s a,.header_in .header_btn_s span{ font-size:14px; display:block; float:left; margin:16px 0 0 15px; border-radius:5px; background-image:url('../images/Sprites.png'); background-repeat:no-repeat; cursor: pointer;}
+.header_in .header_btn_s a:hover{ text-decoration:none;}
+.header_btn_s em { display:none;}
+.header_in .header_btn_s a.product_b{padding:5px 18px 5px 10px; background-position:71px 10px; display:none;}
+.header_in .header_btn_s a.reg_b{padding:5px 10px 5px 26px;  background-position:7px -26px; display:none;}
+.header_in .header_btn_s a.log_b{padding:5px 10px 5px 26px; background-position:7px -65px; display:none;}
+.footer,.contact_footer_box,.contact_footer{ position:absolute !important;} 
+.footer{ overflow:hidden;}
+.erweima_weixin{ width:100%; height:auto; text-align:center; position:absolute; left:0; bottom:-200px;  padding-top:18px;opacity:0;filter:Alpha(opacity=0);}
+ .erweima_weixin .header_background{ height:100%;}
+ .erweima_weixin img{ position:relative; margin:20px; border:5px #FFFFFF solid; z-index:10; max-width:100%; height:auto;}
+ .weixn_closed{ display:block; width:17px; height:23px; background:0 -546px no-repeat url('../images/Sprites.png'); position: absolute; top:10px; right:10px; z-index:10; cursor:pointer;}
+#header_menu{ width:100%;}	
+ .nav_pic_swiper{ width:98%; z-index:10;}	
+#product_nav{ width:96%; height: auto; padding:2%; }
+#product_nav #header_menu{ height: auto; width:100%; }
+.prodnav-wrapper{ height:300px; width:100%; overflow:hidden; float:left;}
+#product_nav #header_menu li{ display:block; width:100%; height:auto;}
+.left_mian{ display:none;}
