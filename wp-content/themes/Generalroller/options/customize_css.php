@@ -44,7 +44,9 @@ $footer_grel=get_option('mytheme_footer_grel');
 				 echo '.pic_big_bottom_in_search #searchsubmit,#nav_product_mue #choose,.nav_poket_ul li:hover .poket_btn,.caseshow ul li:hover div #casebtn,#commentform #submit,.cunst_navs_next a:hover{background:'.$index_blue.'}
 				 
 				 .poket_btn,.caseshow ul li div #casebtn,.cunst_navs_next a:hover{border:1px solid '.$index_blue.'}
-				  ';} 
+				  ';
+				  echo '.fourq_title a.cues,.index_swipers .swiper-slide .news .news_tabs a.active, .index_swipers .swiper-slide .news .news_header h2,.index_swipers .swiper-slide .news .news_more_s a{background:'.$index_blue.';} ';
+				} 
 				  if($mytheme_nav_bac_img){echo '.header{background:url('.$mytheme_nav_bac_img.')}';}
 				 if( $mytheme_nav_hover&&$mytheme_nav_hover!='#fafafa'){echo '#header_pic_nav li:hover, #header_pic_nav li.current-menu-item{ background:'.$mytheme_nav_hover.';}';}
 				  if( $mytheme_nav_hover_boder&&$mytheme_nav_hover_boder!='#ffa800'){echo '#header_pic_nav li.current-menu-item a{ border-bottom:3px solid '.$mytheme_nav_hover_boder.';}';}
