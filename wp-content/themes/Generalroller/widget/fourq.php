@@ -6,126 +6,163 @@ class fourq extends WP_Widget {
 	{
 		$widget_ops = array('classname'=>'fourq','description' =>get_bloginfo('template_url').'/images/xuanxiang/66.gif');
 		$control_ops = array('width' => 200, 'height' => 300);
-		parent::WP_Widget($id_base="fourq",$name='关于我们模块',$widget_ops,$control_ops);  
+		parent::WP_Widget($id_base="fourq",$name='三栏目切换',$widget_ops,$control_ops);  
 
 	}
 
 	function form($instance) { 
-	     $modle_id = esc_attr($instance['modle_id']);
-	     $my_text1 = esc_attr($instance['my_text1']);
-		 $my_text3 = esc_attr($instance['my_text3']);
-		 $title = esc_attr($instance['title']);
-		 $my_b_images = esc_attr($instance['my_b_images']);
-		 $my_text_url= esc_attr($instance['my_text_url']);
-		 $my_btn1= esc_attr($instance['my_btn1']);
-		 $my_btn2= esc_attr($instance['my_btn2']);
-		$my_text_url2= esc_attr($instance['my_text_url2']);
-		  $titleseo= esc_attr($instance['titleseo']);
-			 $titleseo2= esc_attr($instance['titleseo2']);
+	
+	    	
+		 $cat =esc_attr($instance['cat']);
+		  $cat2 =esc_attr($instance['cat2']);
+		   $cat3 =esc_attr($instance['cat3']);
+		 $id =esc_attr($instance['id']);
+		 $target = esc_attr($instance['target']);
+		  $title = esc_attr($instance['title']);
+		   $title2 = esc_attr($instance['title2']);
+		 
+		  $fourqs = esc_attr($instance['fourqs']); 
+		   $fourqs_pic = esc_attr($instance['fourqs_pic']);
+		    $fourqs_link = esc_attr($instance['fourqs_link']);
+		 $nunber = esc_attr($instance['nunber']);
+		 $location = esc_attr($instance['location']);
+		 $jcar = esc_attr($instance['jcar']);
+         $timess =esc_attr($instance['timess']);
+			 $zhiding = esc_attr($instance['zhiding']);
+	$showmove =esc_attr($instance['showmove']);
 	?>
 
+<br />
 
 
-<p>
- <label  for="<?php echo $this->get_field_id('modle_id'); ?>">模块id:</label>
- <input type="text" size="40" value="<?php echo $modle_id ; ?>" name="<?php echo $this->get_field_name('modle_id'); ?>" id="<?php echo $this->get_field_id('modle_id'); ?>"/>
-<em style="padding:3px; background:#FCF3E4; border:solid 1px #F0D8BF; display:block;">(若使用多次这个模块请填写id，以便动画能够正常显示，如第一次使用填写1，第二次使用填写2，若在一个页面只是用一次那么就不需要填写了)</em>
- </p>
- 
-<p>
- <label  for="<?php echo $this->get_field_id('my_text1'); ?>">标题:</label>
- <input type="text" size="40" value="<?php echo $my_text1 ; ?>" name="<?php echo $this->get_field_name('my_text1'); ?>" id="<?php echo $this->get_field_id('my_text1'); ?>"/>
+<p>   
 
- </p>
- 
- <p>
- <label  for="<?php echo $this->get_field_id('title'); ?>">标题2:</label>
- <input type="text" size="40" value="<?php echo $title ; ?>" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>"/>
-
- </p>
-
- 
- 
-<p>
- <label  for="<?php echo $this->get_field_id('my_text3'); ?>">文字段落:</label>
-<textarea style="width:98%;" id="<?php echo $this->get_field_id('my_text3'); ?>" name="<?php echo $this->get_field_name('my_text3'); ?>"cols="52" rows="4" ><?php echo stripslashes($my_text3); ?></textarea>  
- <em style="padding:3px; background:#FCF3E4; border:solid 1px #F0D8BF; display:block;"><?php esc_attr_e('使用代码 <br />进行分行,也支持html代码');?></em>
-</p>
-
-
-<p>
- <label  for="<?php echo $this->get_field_id('my_btn1'); ?>">按钮1:</label>
- <input type="text" size="40" value="<?php echo $my_btn1 ; ?>" name="<?php echo $this->get_field_name('my_btn1'); ?>" id="<?php echo $this->get_field_id('my_btn1'); ?>"/>
-</p>
-
-<p>
- <label  for="<?php echo $this->get_field_id('my_text_url'); ?>">按钮链接1:</label>
- <input type="text" size="40" value="<?php echo $my_text_url ; ?>" name="<?php echo $this->get_field_name('my_text_url'); ?>" id="<?php echo $this->get_field_id('my_text_url'); ?>"/>
-</p>
-
-   
-
-<p>
- <label  for="<?php echo $this->get_field_id('my_btn2'); ?>">按钮2:</label>
- <input type="text" size="40" value="<?php echo $my_btn2; ?>" name="<?php echo $this->get_field_name('my_btn2'); ?>" id="<?php echo $this->get_field_id('my_btn2'); ?>"/>
-</p>
-
-<p>
- <label  for="<?php echo $this->get_field_id('my_text_url2'); ?>">按钮链接2:</label>
- <input type="text" size="40" value="<?php echo $my_text_url2 ; ?>" name="<?php echo $this->get_field_name('my_text_url2'); ?>" id="<?php echo $this->get_field_id('my_text_url2'); ?>"/>
+    <label  for="<?php echo $this->get_field_id('location'); ?>">模块位置:</label><br />
+             <select id="<?php echo $this->get_field_id('location'); ?>" name="<?php echo $this->get_field_name('location'); ?>" >
+              <option value='2'<?php if ($location == "" ) {echo "selected='selected'";}?>>两栏27%宽度</option>
+	          <option value='1'<?php if ($location == "1" ) {echo "selected='selected'";}?>>两栏70%宽度</option>
+              
+		
+	</select>
+<em><strong>这个模块只能存在于上面的两个宽度，如果放置进入100%宽度，他会自动呈现27%的宽度效果</strong>（请选择放置的模块位置，因为模块的宽度不同，所以在每一个宽度所呈现的样式是不同的，请在此选择一下，你可以观察一下小工具标题，进行选择）</em>
 </p>
 
 
 
 
-
-
+<p><br />请选择调用的分类1</p>
+<label  for="<?php echo $this->get_field_id('cat'); ?>">请选择分类:</label><br />
+             <select id="<?php echo $this->get_field_id('cat'); ?>" name="<?php echo $this->get_field_name('cat'); ?>" >
+              <option value=''>请选择</option>
+<?php 
+	$categorys = get_categories(array('hide_empty' => 0));
+		
+		foreach( $categorys AS $category ) { 
+		 $category_id= $category->term_id;
+		 $category_name=$category->cat_name;
+		?>
+       
+			<option 
+				value='<?php echo  $category_id; ?>'
+				<?php
+					if ( $cat == $category_id ) {
+						echo "selected='selected'";
+					}
+				?>><?php echo  $category_name; ?></option>
+		<?php } ?>
+	</select>
 
 <p>
-  <label  for="<?php echo $this->get_field_id('my_b_images'); ?>">背景图片:</label><br />
- <input type="text" size="40" value="<?php echo $my_b_images ; ?>" name="<?php echo $this->get_field_name('my_b_images'); ?>" id="<?php echo $this->get_field_id('my_b_images'); ?>"/>
- 
- <a id="ashu_upload" class="left_right_upload_button button" href="#">上传</a>
- 
- <em style="padding:3px; background:#FCF3E4; border:solid 1px #F0D8BF; display:block;">（尺寸宽度为1920，高度取决于你的图片和文字大小，若选择了表单模式高度为640px,建议上传可以无限重复的背景图片）</em>
- 
-</p> 
 
-<b>seo标签设置</b><br />
-   
-    <label  for="<?php echo $this->get_field_id('titleseo'); ?>">模块标题seo标签</label><br />
-             <select id="<?php echo $this->get_field_id('titleseo'); ?>" name="<?php echo $this->get_field_name('titleseo'); ?>" >
-              <option value=''<?php if ($titleseo == "" ) {echo "selected='selected'";}?> > div标签</option>
-              <option value='h2'<?php if ($titleseo == "h2" ) {echo "selected='selected'";}?> > 	H2标签</option>
-              <option value='h3'<?php if ($titleseo == "h3" ) {echo "selected='selected'";}?> > H3标签</option>
-               <option value='h4'<?php if ($titleseo == "h4" ) {echo "selected='selected'";}?> > H4标签</option>
-                  <option value='h5'<?php if ($titleseo == "h5" ) {echo "selected='selected'";}?> > H5标签</option>
-                <option value='strong'<?php if ($titleseo == "strong" ) {echo "selected='selected'";}?> > strong标签</option>
-	          
+
+<p><br />请选择调用的分类2</p>
+<label  for="<?php echo $this->get_field_id('cat2'); ?>">请选择分类:</label><br />
+             <select id="<?php echo $this->get_field_id('cat2'); ?>" name="<?php echo $this->get_field_name('cat2'); ?>" >
+              <option value=''>请选择</option>
+<?php 
+		$categorys2 = get_categories(array('hide_empty' => 0));
+		
+		foreach( $categorys2 AS $category ) { 
+		 $category_id= $category->term_id;
+		 $category_name=$category->cat_name;
+		?>
+       
+			<option 
+				value='<?php echo  $category_id; ?>'
+				<?php
+					if ( $cat2 == $category_id ) {
+						echo "selected='selected'";
+					}
+				?>><?php echo  $category_name; ?></option>
+		<?php } ?>
+	</select>
+
+<p>
+
+<p><br />请选择调用的分类3</p>
+<label  for="<?php echo $this->get_field_id('cat3'); ?>">请选择分类:</label><br />
+             <select id="<?php echo $this->get_field_id('cat3'); ?>" name="<?php echo $this->get_field_name('cat3'); ?>" >
+              <option value=''>请选择</option>
+<?php 
+		$categorys3 = get_categories(array('hide_empty' => 0));
+		
+		foreach( $categorys3 AS $category ) { 
+		 $category_id= $category->term_id;
+		 $category_name=$category->cat_name;
+		?>
+       
+			<option 
+				value='<?php echo  $category_id; ?>'
+				<?php
+					if ( $cat3 == $category_id ) {
+						echo "selected='selected'";
+					}
+				?>><?php echo  $category_name; ?></option>
+		<?php } ?>
+	</select>
+
+<p>
+<p><label for="<?php echo $this->get_field_id('nunber'); ?>"><?php esc_attr_e('显示数量(默认8):'); ?> <input class="widefat" id="<?php echo $this->get_field_id('nunber'); ?>" name="<?php echo $this->get_field_name('nunber'); ?>" type="text" value="<?php echo $nunber; ?>" /></label></p>
+ 
+
+
+<br />
+<p>   
+    <label  for="<?php echo $this->get_field_id('zhiding'); ?>">文章排序:</label><br />
+             <select id="<?php echo $this->get_field_id('zhiding'); ?>" name="<?php echo $this->get_field_name('zhiding'); ?>" >
+              <option value=''<?php if ($zhiding == "" ) {echo "selected='selected'";}?> >显示最新文章</option>
+	          <option value='1'<?php if ($zhiding == "1" ) {echo "selected='selected'";}?>>只显示置顶的文章</option>
+              <option value='2'<?php if ($zhiding == "2" ) {echo "selected='selected'";}?>>显示随机文章</option>
+		
 	</select>
 
 </p>
 
-<p>
+<p>   
 
-    <label  for="<?php echo $this->get_field_id('titleseo2'); ?>">模块副标题seo标签</label><br />
-             <select id="<?php echo $this->get_field_id('titleseo2'); ?>" name="<?php echo $this->get_field_name('titleseo2'); ?>" >
-              <option value=''<?php if ($titleseo2 == "" ) {echo "selected='selected'";}?> > H2标签（默认）</option>
-              <option value='h3'<?php if ($titleseo2 == "h3" ) {echo "selected='selected'";}?> > H3标签</option>
-                <option value='h4'<?php if ($titleseo2 == "h4" ) {echo "selected='selected'";}?> > H4标签</option>
-                  <option value='h5'<?php if ($titleseo2 == "h5" ) {echo "selected='selected'";}?> > H5标签</option>
-                <option value='strong'<?php if ($titleseo2 == "strong" ) {echo "selected='selected'";}?> > strong标签</option>
-                 <option value='div'<?php if ($titleseo2 == "div" ) {echo "selected='selected'";}?> > div标签</option>
-             
-             
-           
-                 
-	          
+    <label  for="<?php echo $this->get_field_id('target'); ?>">链接方式:</label><br />
+             <select id="<?php echo $this->get_field_id('target'); ?>" name="<?php echo $this->get_field_name('target'); ?>" >
+              <option value=''<?php if ($target == "" ) {echo "selected='selected'";}?> >自身页面转换</option>
+	          <option value='1'<?php if ($target == "1" ) {echo "selected='selected'";}?>>打开新窗口</option>
+		
 	</select>
-<em style="padding:3px; background:#FCF3E4; border:solid 1px #F0D8BF; display:block;">由于这款主题的模块可以显示在不同的区域，因此不同的区域的seo标签是可以自定义的，以此增强你的权重递归性，如果不明白如何使用，可以<a href=" http://www.themepark.com.cn/wordpresswzseobqdgxjy.html" target="_blank">点击查看分析文章</a></em>
+
+</p>
+<p>   
+
+    <label  for="<?php echo $this->get_field_id('showmove'); ?>">移动版是否显示:</label><br />
+             <select id="<?php echo $this->get_field_id('showmove'); ?>" name="<?php echo $this->get_field_name('showmove'); ?>" >
+              <option value=''<?php if ($showmove== "" ) {echo "selected='selected'";}?> >显示</option>
+	          <option value='1'<?php if ($showmove == "1" ) {echo "selected='selected'";}?>>不显示</option>
+		
+	</select>
+
 </p>
 
-   
+
+
+
+ <script language="javascript">(function(a){a(function(){a(".color-field_w").wpColorPicker();a(".customize-control-widget_form .widget-control-save").fadeIn()})})(jQuery);jQuery(document).ready(function(){var b;var a;jQuery(".upload_button_w").on("click",function(c){a=jQuery(this).prev("input");b=wp.media({title:"选择图片",button:{text:"选择"},multiple:false});if(b){b.open()}b.on("select",function(){attachment=b.state().get("selection").first().toJSON();jQuery(a).val(attachment.url);jQuery(".supports-drag-drop").remove()})})});</script>   
 	<?php
     }
 	function update($new_instance, $old_instance) { // 更新保存
@@ -136,61 +173,145 @@ class fourq extends WP_Widget {
 	     $id =$instance['id'];
         $before_content = $instance['before_content'];
         $after_content = $instance['after_content'];
-	  
-		$my_text1  = apply_filters('widget_title', empty($instance['my_text1']) ? __('') : $instance['my_text1']);
-		$my_text3  = apply_filters('widget_title', empty($instance['my_text3']) ? __('') : $instance['my_text3']);
-        $title = apply_filters('widget_title', empty($instance['title']) ? __('') : $instance['title']);
-	    $my_b_images = apply_filters('widget_title', empty($instance['my_b_images']) ? __('') : $instance['my_b_images']);
-	    $my_text_url= apply_filters('widget_title', empty($instance['my_text_url']) ? __('') : $instance['my_text_url']);
-		 $my_text_url2= apply_filters('widget_title', empty($instance['my_text_url2']) ? __('') : $instance['my_text_url2']);
-	    $my_btn1= apply_filters('widget_title', empty($instance['my_btn1']) ? __('') : $instance['my_btn1']);
-		$my_btn2= apply_filters('widget_title', empty($instance['my_btn2']) ? __('') : $instance['my_btn2']);
-	    $titleseo=  apply_filters('widget_title', empty($instance['titleseo']) ? __('0') : $instance['titleseo']);
-		$titleseo2=  apply_filters('widget_title', empty($instance['titleseo2']) ? __('0') : $instance['titleseo2']);
-		$modle_id = apply_filters('widget_title', empty($instance['modle_id']) ? __('0') : $instance['modle_id']);
-		$detect = new Mobile_Detect();
-		if($my_b_images) {$my_images='style="background:url('.$my_b_images.')"';} 
-		
-				
+		$title= apply_filters('widget_title', empty($instance['title']) ? __('') : $instance['title']);
+		$title2= apply_filters('widget_title', empty($instance['title2']) ? __('') : $instance['title2']);
+		$cat = apply_filters('widget_title', empty($instance['cat']) ? __('') : $instance['cat']);
+		$cat2 = apply_filters('widget_title', empty($instance['cat2']) ? __('') : $instance['cat2']);
+		$cat3 = apply_filters('widget_title', empty($instance['cat3']) ? __('') : $instance['cat3']);
+		$location= apply_filters('widget_title', empty($instance['location']) ? __('') : $instance['location']);
+		$id = apply_filters('widget_title', empty($instance['id']) ? __('1') : $instance['id']);
+	    $fourqs = apply_filters('widget_title', empty($instance['fourqs']) ? __('') : $instance['fourqs']);
+		 $fourqs_pic = apply_filters('widget_title', empty($instance['fourqs']) ? __('') : $instance['fourqs_pic']);
+	    $zhiding  = apply_filters('widget_title', empty($instance['zhiding']) ? __('') : $instance['zhiding']);
+		$jcar = apply_filters('widget_title', empty($instance['jcar']) ? __('2') : $instance['jcar']);
+        $target  = apply_filters('widget_title', empty($instance['target']) ? __('2') : $instance['target']);
+		$nunber =apply_filters('widget_title', empty($instance['nunber']) ? __('8') : $instance['nunber']);
+		$timess=apply_filters('widget_title', empty($instance['timess']) ? __('7') : $instance['timess']);
+        $fourqs_link=apply_filters('widget_title', empty($instance['fourqs_link']) ? __('7') : $instance['fourqs_link']);
+		$showmove=apply_filters('widget_title', empty($instance['showmove']) ? __('') : $instance['showmove']);
+		if( $target  =="1" ){ $tagerts = 'target="_blank"';}
+if( $zhiding =="1" ){ $post__in = get_option('sticky_posts');}
+if( $zhiding =="2" ){ $oder="rand";}else{ $oder="ASC";}
+	 $detect = new Mobile_Detect();	
+	 $args = array( 'cat' =>$cat, 'showposts' => $nunber, 'post__in' =>$post__in,'orderby' => $oder);    	
+ $query = new WP_Query( $args ); 
+ if(!$query->have_posts()) { get_template_part( 'index/fourq' ); }else{
+	if($location==1||$detect->isMobile()||$detect->isTablet()){ $zi='50';}else{$zi=40;}
+	
+		if($showmove&&$detect->isMobile()||$showmove&&$detect->isTablet()){}else{
 		?>
         
-<div id="about_us<?php echo $modle_id; ?>" class="about" <?php echo $my_images; ?> >
-  <?php if($my_text1||$title){ ?>
-<div class="about_ttile_line">
- <div class="about_title">
-    <?php if($titleseo){echo '<'.$titleseo.'  class="mantitle">';}else{echo '<div  class="mantitle">';} ?>
-	<?php echo $my_text1 ; ?>
-	<?php if($titleseo){echo '</'.$titleseo.'>';}else{echo '</div>';} ?>
+        
+<div class="fourq  box">
+
+ <div class="fourq_title">
+ <a class="ouf_1 cues"><?php echo get_cat_name($cat) ;?></a><a class="ouf_2"><?php echo get_cat_name($cat2) ;?></a><a class="ouf_3"><?php echo get_cat_name($cat3) ;?></a>
+ </div>
+<?php  if($cat){ ?>
+ <ul class="ulf_1">
+   <?php
+     
+ $ashu_i=0; while ( $query->have_posts() ) :$query->the_post(); $ashu_i++; 
+ 
+   $id=get_the_ID(); 
+  $tit= get_the_title($id);
+  $title_images= get_post_meta($id,"title_images", true);
+  $linkss=get_post_meta($id,"hoturl", true); 
+  $attachment_id = get_attachment_id_from_src(  $title_images );
+ if($ashu_i==1){?>           
+
+<li class="fourq_first">
+    <a <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>" class="four_pic">
     
-     <?php if($titleseo2){echo '<'.$titleseo2.'  class="sectitle">';}else{echo '<h2  class="sectitle">';} ?>
-   <?php echo $title ; ?>
-   <?php if($titleseo2){echo '</'.$titleseo2.'>';}else{echo '</h2>';} ?>
-     <div class="about_title_line_in line_left"></div>
-      <div class="about_title_line_in line_right"></div>
- </div>
-
-</div>
- <?php } ?>
+   <?php  themepark_thumbnails('twox');?></a>
+    <span>
+      <b><a  <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>" ><?php  echo mb_strimwidth(strip_tags(apply_filters('the_title', $tit)),  0,$zi,"...",'utf8'); ?></a></b>
+      <p><a>发布时间：<?php echo get_the_time('Y/m/d') ; ?></a></p>
+      <?php if($location==1||$detect->isTablet()){ ?> <p> <?php echo mb_strimwidth(strip_tags(apply_filters('the_excerp',get_the_excerpt($id))),0,420,"...",'utf-8'); ?></p><?php } ?>
+    </span>
  
- <div class="about_p"><?php echo html_entity_decode($my_text3); ?></div>
+ </li>
+   <?php }else{ ?>
+   <li class="text_fp"> <b><a <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>">
+   <?php  echo mb_strimwidth(strip_tags(apply_filters('the_title', $tit)),  0,$zi,"...",'utf8'); ?></a></b> </li>
+   
 
+  <?php }; endwhile; wp_reset_query();     ?>
+     <li class="fourq_more"><a target="_blank" href="<?php echo get_category_link($cat) ?>">查看全部</a></li>
+    </ul>
+  <?php } ?>
 
-<div class="about_vedio">
-
-</div>
-<?php if($my_btn1||$my_btn2){ ?>
-<div class="about_btn">
- <?php if($my_btn1){ ?> <a href="<?php echo  $my_text_url; ?>"><?php echo $my_btn1; ?></a><?php } ?>
- <?php if($my_btn2){ ?> <a href="<?php echo  $my_text_url2; ?>"><?php echo $my_btn2; ?></a><?php } ?>
-</div>
- <?php } ?>
+<?php  if($cat2){ ?>
+ <ul class="ulf_2">
+   <?php
+ $args = array( 'cat' =>$cat2, 'showposts' => $nunber, 'post__in' =>$post__in,'orderby' => $oder);    	
+ $query = new WP_Query( $args );      
+ $ashu_i=0; while ( $query->have_posts() ) :$query->the_post(); $ashu_i++; 
  
- </div>
- <?php 
-  $page_id =get_the_ID();if(get_post_meta($page_id, "customize",true)==='modle1'){$donghuaopens="ys";}
- if(is_home()||is_page()&&$donghuaopens){  if(!get_option("mytheme_donghuaopen")){?>
-<script> $(window).scroll(function () {$(".donghuaopen #about_us<?php echo $modle_id; ?>").about();}); </script>      
+   $id=get_the_ID(); 
+  $tit= get_the_title($id);
+  $title_images= get_post_meta($id,"title_images", true);
+  $linkss=get_post_meta($id,"hoturl", true); 
+  $attachment_id = get_attachment_id_from_src(  $title_images );
+ if($ashu_i==1){?>           
+
+<li class="fourq_first">
+    <a <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>" class="four_pic">
+    
+   <?php  themepark_thumbnails('twox' );?></a>
+    <span>
+      <b><a  <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>" ><?php  echo mb_strimwidth(strip_tags(apply_filters('the_title', $tit)),  0,$zi,"...",'utf8'); ?></a></b>
+      <p><a>发布时间：<?php echo get_the_time('Y/m/d') ; ?></a></p>
+     <?php if($location==1||$detect->isTablet()){ ?> <p> <?php echo mb_strimwidth(strip_tags(apply_filters('the_excerp',get_the_excerpt($id))),0,420,"...",'utf-8'); ?></p><?php } ?>
+    </span>
+ 
+ </li>
+   <?php }else{ ?>
+   <li class="text_fp"> <b><a <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>">
+   <?php  echo mb_strimwidth(strip_tags(apply_filters('the_title', $tit)),  0,$zi,"...",'utf8'); ?></a></b> </li>
+   
+
+  <?php }; endwhile; wp_reset_query();     ?>
+    <li class="fourq_more"><a target="_blank" href="<?php echo get_category_link($cat2) ?>">查看全部</a></li>
+    </ul>
+  <?php } ?>
+<?php  if($cat3){ ?>
+ <ul class="ulf_3">
+   <?php
+ $args = array( 'cat' =>$cat3, 'showposts' => $nunber, 'post__in' =>$post__in,'orderby' => $oder);    	
+ $query = new WP_Query( $args );      
+ $ashu_i=0; while ( $query->have_posts() ) :$query->the_post(); $ashu_i++; 
+ 
+   $id=get_the_ID(); 
+  $tit= get_the_title($id);
+  $title_images= get_post_meta($id,"title_images", true);
+  $linkss=get_post_meta($id,"hoturl", true); 
+  $attachment_id = get_attachment_id_from_src(  $title_images );
+ if($ashu_i==1){?>           
+
+<li class="fourq_first">
+    <a <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>" class="four_pic">
+    
+   <?php  themepark_thumbnails('twox');?></a>
+    <span>
+      <b><a  <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>" ><?php  echo mb_strimwidth(strip_tags(apply_filters('the_title', $tit)),  0,$zi,"...",'utf8'); ?></a></b>
+      <p><a>发布时间：<?php echo get_the_time('Y/m/d') ; ?></a></p>
+      <?php if($location==1||$detect->isTablet()){ ?> <p> <?php echo mb_strimwidth(strip_tags(apply_filters('the_excerp',get_the_excerpt($id))),0,420,"...",'utf-8'); ?></p><?php } ?>
+    </span>
+ 
+ </li>
+   <?php }else{ ?>
+   <li class="text_fp"> <b><a <?php echo $tagerts ?> title="<?php the_title(); ?>" href="<?php if($linkss !=""){echo $linkss;}else{echo get_permalink();}; ?>">
+   <?php  echo mb_strimwidth(strip_tags(apply_filters('the_title', $tit)),  0,$zi,"...",'utf8'); ?></a></b> </li>
+   
+
+  <?php }; endwhile; wp_reset_query();     ?>
+ <li class="fourq_more"><a target="_blank" href="<?php echo get_category_link($cat3) ?>">查看全部</a></li>
+    </ul>
+  <?php } ?>
   
+</div>
+
  
         <?php
 	}}}
