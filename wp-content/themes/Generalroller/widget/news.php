@@ -180,7 +180,10 @@ class news_index extends WP_Widget {
 <div class="about_ttile_line">
  <div class="about_title">
     <?php if($titleseo){echo '<'.$titleseo.'  class="mantitle">';}else{echo '<div  class="mantitle">';} ?>
-	<?php echo $my_text2 ; ?>
+	<?php //echo $my_text2 ;
+		echo '试一试'; 
+	?>
+	
 	<?php if($titleseo){echo '</'.$titleseo.'>';}else{echo '</div>';} ?>
     
      <?php if($titleseo2){echo '<'.$titleseo2.'  class="sectitle">';}else{echo '<h2  class="sectitle">';} ?>
